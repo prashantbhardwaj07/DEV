@@ -1,0 +1,25 @@
+<template>
+    <lightning-card>
+ 
+        <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon> <b>Contact Details</b>                          
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered" border="1" cellspacing="0" cellpadding="0" bordercolor="#ccc" style="border-collapse:collapse;">
+           <thead>
+               <tr>
+                   <th>First Name</th>
+                   <th>Last Name</th>                   
+                   <th>Phone</th>
+                   <th>Account Name</th>
+               </tr>
+           </thead> 
+            <template for:each={records} for:item='conItem'>
+                <tr key={conItem.Id}>
+                    <td>{conItem.FirstName}</td>
+                    <td>{conItem.LastName}</td>
+                    <td>{conItem.Phone}</td>
+                    <td>{conItem.Account.Name}</td>
+                </tr>
+            </template>
+        </table>         
+    </lightning-card>
+   
+</template>

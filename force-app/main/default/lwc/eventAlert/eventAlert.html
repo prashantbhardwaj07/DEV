@@ -1,0 +1,25 @@
+<template>
+    <template if:true={events.data}>
+        <lightning-card title="Important Notification" icon-name="custom:custom63">
+            <div class="slds-m-around_medium" >
+                <template for:each={events.data} for:item="evt">
+                    <div key={evt.Id} class="slds-col slds-size_1-of-1" >
+                        <lightning-card  title="" >
+                            <div style="margin-top:-20px;">
+                                <div class="slds-grid slds-wrap" >
+                                    <lightning-dynamic-icon type="trend" option="up" alternative-text="Trending up"></lightning-dynamic-icon>
+                                    <div style="margin-left:8px;">
+                                        <p key={evt.Id}><b>Name:</b> {evt.Name}</p>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-wrap" style="margin-left:23px;">
+                                    <p key={evt.Id}><b>Description:</b> {evt.Description__c}</p>
+                                </div>
+                            </div>
+                        </lightning-card>
+                    </div>
+                </template>
+            </div>
+        </lightning-card>
+    </template>               
+</template>
