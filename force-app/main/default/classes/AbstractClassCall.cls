@@ -7,8 +7,9 @@ public class AbstractClassCall extends AbstractClassExample{
    }	
  
    public override String myVirtualMethod() {
+      System.debug('This is my first commit');
+       System.debug('This is my first commit2');
       return '<<Virtual method overridden in child class!>>\n';
-      System.debug('My new git changes');
    }   
  
    public String invokeMethodFromAbstractClass() {
